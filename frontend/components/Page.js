@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
+import SingleProductPage from '../pages/product/[id]';
 import Header from './Header';
+import SingleProduct from './SingleProduct';
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
