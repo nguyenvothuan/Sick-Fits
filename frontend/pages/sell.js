@@ -1,10 +1,5 @@
-import Page from '../components/Page';
+import CreateProduct from '../components/CreateProduct';
 
 export default function SellPage() {
-  return (
-    <Page>
-      <p>Hello? Saleman here</p>
-      <p>Babe</p>
-    </Page>
-  );
+  return <CreateProduct />;
 }
