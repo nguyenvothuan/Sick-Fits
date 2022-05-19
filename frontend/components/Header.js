@@ -39,11 +39,11 @@ export default function Header() {
         <Logo>
           <Link href="/">Sick fits</Link>
         </Logo>
+        <Nav />
       </div>
       <div className="sub-bar">
         <p>Search</p>
       </div>
-      <Nav />
     </HeaderStyles>
   );
 }
