@@ -1,5 +1,6 @@
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/client/react';
+import { ALL_PRODUCTS_QUERY } from './Products';
 
 const DELETE_PRODUCT_MUTATION = gql`
   mutation DELETE_PRODUCT_MUTATION($id: ID!) {
@@ -10,6 +11,12 @@ const DELETE_PRODUCT_MUTATION = gql`
   }
 `;
 
+// evict function from apollo. So there is a cache in the client side. You evict this deletion to that cache.
+function update(cache, payload) {
+  console.log(payload);
+  cache.evict(cache.identify(payload.data.deleteProduct));
+}
+
 export default function DeleteProduct({ id, children }) {
   const [deleteProduct, { loading, error }] = useMutation(
     DELETE_PRODUCT_MUTATION,
@@ -17,6 +24,8 @@ export default function DeleteProduct({ id, children }) {
       variables: {
         id,
       },
+      // refetchQueries: [{ query: ALL_PRODUCTS_QUERY }],
+      update,
     }
   );
   return (
