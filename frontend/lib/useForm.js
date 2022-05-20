@@ -1,9 +1,13 @@
-import { func } from 'prop-types';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function useForm(initial = {}) {
   // create a state object fror our inputs
   const [input, setInputs] = useState(initial);
+  const initialValues = Object.values(initial).join('');
+  useEffect(() => {
+    setInputs(initial);
+  }, [initialValues]);
+
   function handleChange(e) {
     let { value, name, type } = e.target;
     if (type === 'number') {

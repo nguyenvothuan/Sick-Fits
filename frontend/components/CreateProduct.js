@@ -36,7 +36,7 @@ export default function CreateProduct() {
   const { input, handleChange, resetForm, clearForm } = useForm({
     name: 'Hong Anh',
     price: 9,
-    description: 'my future wife',
+    description: 'youre the sunflower',
     image: '',
   });
   const [createProduct, { loading, error, data }] = useMutation(
