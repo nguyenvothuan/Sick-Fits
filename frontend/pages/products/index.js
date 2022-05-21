@@ -8,7 +8,7 @@ export default function OrderPage() {
   return (
     <div>
       <Pagination page={query.page || 1} />
-      <Products />
+      <Products page={query.page} />
       <Pagination page={query.page || 1} />
     </div>
   );
