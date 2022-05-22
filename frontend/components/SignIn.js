@@ -43,7 +43,7 @@ export default function SignIn() {
     data?.authenticateUserWithPassword?.__typename ===
     'UserAuthenticationWithPasswordFailure'
       ? data?.authenticateUserWithPassword
-      : undefined;``
+      : undefined;
   return (
     <Form method="POST" onSubmit={handleSubmit}>
       <h2>Sign Into Your Account</h2>
