@@ -24,7 +24,7 @@ export default function Pagination({ page }) {
     <PaginationStyles>
       <Head>
         <title>
-          Stuff - Page {page} of {count}
+          Stuff - Page {page} of {pageCount}
         </title>
       </Head>
       <Link href={`/products/${parseInt(page) - 1}`}>
@@ -34,7 +34,7 @@ export default function Pagination({ page }) {
         </a>
       </Link>
       <p>
-        Page {page} of {count}
+        Page {page} of {pageCount}
       </p>
       <p>{count} Items Total</p>
       <Link href={`/products/${parseInt(page) + 1}`}>
