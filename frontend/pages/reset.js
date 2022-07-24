@@ -6,7 +6,7 @@ export default function ResetPage({ query }) {
   if (!query?.token)
     return (
       <div>
-        <p>You gonna be kidding</p>
+        <p>You gotta be kidding</p>
         <RequestReset />
       </div>
     );
