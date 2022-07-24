@@ -4,4 +4,4 @@ export default function OrderPage() {
       <p>Hello!</p>
     </div>
   );
-}g
+}
